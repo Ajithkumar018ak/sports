@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Facilities </title>
+  <meta name="description"
+    content="Tour the world-class athletic facilities at Apex Sports Academy. Discover our indoor stadium, football ground, cricket nets, swimming pools, recovery clinics and fitness gyms.">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Custom Page Preloader -->
+  <div id="loader-overlay">
+    <div class="loader-card">
+      <div class="loader-ring-wrapper">
+        <div class="loader-glow"></div>
+        <div class="loader-circle"></div>
+        <img src="assets/logo.webp" alt="Apex Logo" class="loader-logo">
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+      </div>
+      <h2 class="loader-title">Sports Academy</h2>
+      <div class="loader-text-wrapper">
+        <span class="loader-message">Preparing Your Experience</span>
+        <span class="loader-dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <a href="index.html" class="logo-link">
+          <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+        </a>
+
+        <nav class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="facilities.html" class="nav-link active">Facilities</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="events.html" class="nav-link">Events</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <a href="#" class="btn btn-primary login-trigger">Login</a>
+          <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div class="mobile-drawer-logo-section">
+      <a href="index.html" class="mobile-drawer-logo-link">
+        <img src="assets/logo2.webp" alt="Sports Academy Logo" class="mobile-drawer-logo">
+      </a>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 16v-4" />
+          <path d="M12 8h.01" />
+        </svg>
+        <span>About</span>
+      </a>
+      <a href="facilities.html" class="mobile-nav-link active">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M9 3v18" />
+          <path d="M15 3v18" />
+          <path d="M3 9h18" />
+          <path d="M3 15h18" />
+        </svg>
+        <span>Facilities</span>
+      </a>
+      <a href="gallery.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+          <circle cx="9" cy="9" r="2" />
+          <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+        </svg>
+        <span>Gallery</span>
+      </a>
+      <a href="events.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+        <span>Events</span>
+      </a>
+      <a href="blog.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+          <path d="M6 6h10" />
+          <path d="M6 10h10" />
+        </svg>
+        <span>Blog</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <span>Contact</span>
+      </a>
+    </nav>
+    <div class="mobile-drawer-btn-wrapper">
+      <a href="#" class="btn btn-primary login-trigger">Login Portal</a>
+    </div>
+    <div class="mobile-drawer-contact-info">
+      <div class="mobile-drawer-contact-title">📞 Contact Us</div>
+      <a href="tel:+919865755478" class="mobile-drawer-contact-link">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <span>+91 98657-55478</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="page-transitioning">
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div class="page-hero-content reveal fade-right">
+            <nav class="breadcrumb-nav">
+              <a href="index.html">Home</a>
+              <span class="separator">/</span>
+              <span class="current">Facilities</span>
+            </nav>
+            <h1 class="page-hero-title">High-Performance Infrastructure</h1>
+            <p class="page-hero-desc">Explore the world-class athletic environments built to support technical
+              precision, strength metrics, and physiological recovery.</p>
+          </div>
+          <div class="page-hero-visual reveal fade-left delay-2">
+            <!-- Image Placeholder 3: Facilities Image -->
+            <div class="img-placeholder facilities-placeholder">
+              <img src="assets/f1 (1).webp" alt="Arena Complex Campus Layout" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facilities Detailed Showcase Section -->
+    <section class="facilities-showcase">
+      <div class="container">
+        <div class="section-header center reveal fade-up">
+          <span class="section-tag">Explore Campus</span>
+          <h2 class="section-title">Professional Training Grounds</h2>
+          <p class="section-desc">Our academy is equipped with nine distinct areas specifically engineered for
+            specialized sporting disciplines and physiological upkeep.</p>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- Area 1 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-1">
+            <span class="facility-label">Arena Complex</span>
+            <h3 class="facility-title">Indoor Stadium</h3>
+            <p>A multi-court indoor center equipped with professional maple wood flooring, electronic scoreboards, and
+              climate control configurations for basketball, volleyball, and futsal.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Capacity</span><span>1,200 Seats</span></div>
+              <div class="facility-detail-item"><span>Floor Type</span><span>Hard Maplewood</span></div>
+            </div>
+          </div>
+
+          <!-- Area 2 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-2">
+            <span class="facility-label">Athletics Center</span>
+            <h3 class="facility-title">Outdoor Stadium</h3>
+            <p>Features a 400m synthetic running track certified by IAAF, long-jump pits, throwing rings, and elevated
+              digital video capture bars for speed analysis.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Track Lanes</span><span>8 Lanes</span></div>
+              <div class="facility-detail-item"><span>Surface</span><span>Polyurethane Synthetic</span></div>
+            </div>
+          </div>
+
+          <!-- Area 3 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-3">
+            <span class="facility-label">Football Track</span>
+            <h3 class="facility-title">Football Ground</h3>
+            <p>A FIFA-compliant, high-performance hybrid turf pitch equipped with under-soil drainage, professional
+              floodlights, and automated tactical cameras.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Dimensions</span><span>105m x 68m</span></div>
+              <div class="facility-detail-item"><span>Turf Standard</span><span>FIFA Quality Pro</span></div>
+            </div>
+          </div>
+
+          <!-- Area 4 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-1">
+            <span class="facility-label">Cricket Center</span>
+            <h3 class="facility-title">Cricket Nets</h3>
+            <p>Includes four turf pitches and two concrete bowling tracks fitted with high-speed ball-tracking sensors
+              and digital bowling machines.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Pitches</span><span>6 Lanes Total</span></div>
+              <div class="facility-detail-item"><span>Analytics</span><span>Speed/Swing Radar</span></div>
+            </div>
+          </div>
+
+          <!-- Area 5 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-2">
+            <span class="facility-label">Court Sports</span>
+            <h3 class="facility-title">Basketball Court</h3>
+            <p>Four outdoor court surfaces designed with soft acrylic coating, tempered glass backboards, and
+              pressure-release break-away hoops.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Courts</span><span>4 Outdoor Grids</span></div>
+              <div class="facility-detail-item"><span>Coating</span><span>Acrylic Cushion</span></div>
+            </div>
+          </div>
+
+          <!-- Area 6 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-3">
+            <span class="facility-label">Aquatics Zone</span>
+            <h3 class="facility-title">Swimming Pool</h3>
+            <p>An Olympic-size pool equipped with 10 swimming lanes, touchpads for electronic timing, and water
+              temperature regulators for swimming training.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Length</span><span>50 Meters</span></div>
+              <div class="facility-detail-item"><span>Lanes</span><span>10 Competitor Lanes</span></div>
+            </div>
+          </div>
+
+          <!-- Area 7 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-1">
+            <span class="facility-label">Fitness Unit</span>
+            <h3 class="facility-title">Gym &amp; Fitness Center</h3>
+            <p>Equipped with advanced weightlifting gear, functional training cables, speed training treadmills, and
+              dynamic resistance tracks.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Floor Area</span><span>5,000 Sq. Ft.</span></div>
+              <div class="facility-detail-item"><span>Equipment</span><span>Eleiko &amp; Life Fitness</span></div>
+            </div>
+          </div>
+
+          <!-- Area 8 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-2">
+            <span class="facility-label">Medical Center</span>
+            <h3 class="facility-title">Medical Support</h3>
+            <p>A full-time rehabilitation clinic managed by sports physiotherapists, offering muscular diagnostics,
+              orthopedic reviews, and injury prevention scans.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Staff</span><span>3 Sports Physios</span></div>
+              <div class="facility-detail-item"><span>Equipment</span><span>Diagnostic Ultrasound</span></div>
+            </div>
+          </div>
+
+          <!-- Area 9 -->
+          <div class="facility-showcase-card card-lift reveal fade-up delay-3">
+            <span class="facility-label">Aquatic Healing</span>
+            <h3 class="facility-title">Recovery Zone</h3>
+            <p>Fitted with cold cryotherapy pools, warm jacuzzi jets, dynamic compression boots, and dedicated massage
+              tables to accelerate glycogen re-synthesis.</p>
+            <div class="facility-details">
+              <div class="facility-detail-item"><span>Baths</span><span>Contrast Ice Baths</span></div>
+              <div class="facility-detail-item"><span>Method</span><span>Vasopneumatic Boots</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment & Safety Section -->
+    <section class="equipment-standards-section" style="background-color: var(--color-gray-light);">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 60px;">
+          <div class="equipment-content reveal fade-right">
+            <span class="section-tag">Quality Metrics</span>
+            <h2 style="margin-bottom: 24px;">Modern Equipment &amp; Global Safety Standards</h2>
+            <p style="margin-bottom: 20px;">We take pride in keeping our facilities aligned with professional
+              certification bodies. Our equipment undergoes routine structural checks, and our pitch surfaces are
+              maintained daily to reduce muscle strains and ligament injuries.</p>
+
+            <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 30px;">
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <div
+                  style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--color-sports-green-tint); color: var(--color-sports-green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700;">
+                  1</div>
+                <div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Biomechanical Tracking</h4>
+                  <p style="font-size: 0.95rem;">Every major court and field is fitted with high-speed video capture and
+                    software layers to trace athletic joints and deceleration dynamics.</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <div
+                  style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--color-sports-green-tint); color: var(--color-sports-green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700;">
+                  2</div>
+                <div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Strict Safety Audits</h4>
+                  <p style="font-size: 0.95rem;">Our pools, tracks, and weight equipment are safety audited monthly in
+                    compliance with national occupational health guidelines.</p>
+                </div>
+              </div>
+              <div style="display: flex; gap: 16px; align-items: flex-start;">
+                <div
+                  style="width: 32px; height: 32px; border-radius: 50%; background-color: var(--color-sports-green-tint); color: var(--color-sports-green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700;">
+                  3</div>
+                <div>
+                  <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Certified Medical Response</h4>
+                  <p style="font-size: 0.95rem;">The medical support room is continually staffed during training
+                    operational hours with first-aid and AED certified medical responders.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="equipment-visual reveal fade-left delay-2">
+            <!-- Reusing Facilities Image Placeholder -->
+            <div class="img-placeholder facilities-placeholder" style="min-height: 400px;">
+              <img src="assets/f1 (2).webp" alt="Cryotherapy & Recovery Labs" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Footer CTA Banner -->
+    <section class="cta-section-wrapper">
+      <div class="container">
+        <div class="final-cta-banner reveal zoom-reveal">
+          <div class="final-cta-grid">
+            <div>
+              <h2 class="final-cta-title">Experience Our Facilities Firsthand</h2>
+              <p class="final-cta-desc">Book a private tour of the sports center and consult with our performance
+                staff.</p>
+            </div>
+            <div class="final-cta-actions">
+              <!-- Image Placeholder 5: CTA Image (used inside final CTA card visually) -->
+              <div class="img-placeholder cta-placeholder" style="display: none;"></div>
+              <a href="contact.html" class="btn btn-secondary"
+                style="font-size: 1.05rem; padding: 18px 36px; background-color: var(--color-white); color: var(--color-sports-green);">Request
+                a Campus Tour</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+          </a>
+          <p>An international sports training academy dedicated to athletic excellence, professional mentoring, and
+            holistic development.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Academy</a></li>
+            <li><a href="facilities.html" class="footer-link">Our Facilities</a></li>
+            <li><a href="gallery.html" class="footer-link">Media Gallery</a></li>
+            <li><a href="events.html" class="footer-link">Academy Events</a></li>
+            <li><a href="blog.html" class="footer-link">Sports Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Contact Details</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>100 Apex Boulevard, Arena District, CA 90210</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>admissions@apexsports.com</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 555-APEX</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3 class="footer-title">Newsletter</h3>
+          <p>Subscribe to receive scouting notices, open enrollment dates, and tactical insights.</p>
+          <form class="newsletter-form"
+            onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+            <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+              aria-label="Email Address">
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="copyright">&copy; <span id="copyright-year">2026</span> Apex Sports Academy. All rights
+          reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal Dialog Overlay -->
+  <div class="modal-overlay">
+    <div class="modal-wrapper">
+      <button class="modal-close-btn" aria-label="Close Portal Modal">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-form-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Apex Sports Portal</h3>
+          <p class="modal-subtitle">Select your account profile and enter your credentials</p>
+        </div>
+        <form id="login-form" novalidate>
+          <div class="select-wrapper">
+            <label class="select-label" for="login-role">Login As</label>
+            <select class="custom-select" id="login-role">
+              <option value="Player">Player Login</option>
+              <option value="Admin">Admin Login</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <input type="email" id="modal-email" class="floating-input" placeholder=" " required autocomplete="email">
+            <label for="modal-email" class="floating-label">Email Address</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="modal-password" class="floating-input" placeholder=" " required
+              autocomplete="current-password">
+            <label for="modal-password" class="floating-label">Password</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="modal-confirm-password" class="floating-input" placeholder=" " required
+              autocomplete="new-password">
+            <label for="modal-confirm-password" class="floating-label">Confirm Password</label>
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="modal-remember">
+              <span>Remember Me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary modal-submit-btn">Login</button>
+          <div class="modal-divider">OR</div>
+          <p class="modal-footer-text">Don't have an account? <a href="#">Create Account</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll Back To Top">
+    <svg viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/carousel.js"></script>
+</body>
+
+</html>

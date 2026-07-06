@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Dashboard </title>
+  <meta name="description" content="View your training logs, performance analytics, and upcoming athletic schedules.">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body>
+
+  <!-- Custom Page Preloader -->
+  <div id="loader-overlay" style="transition: opacity 0.4s ease-out; opacity: 1;">
+    <div class="sports-spinner"></div>
+  </div>
+
+  <div class="dashboard-layout">
+
+    <!-- LEFT SIDEBAR -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-logo-section">
+        <a href="#" class="logo-link dashboard-home-trigger">
+          <img src="assets/logo2.webp" alt="Apex Logo" class="sidebar-logo">
+
+        </a>
+      </div>
+      <div class="sidebar-divider"></div>
+
+      <nav class="sidebar-menu">
+        <a href="#" class="sidebar-link active" data-target="view-dashboard">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+            <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+            <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="#" class="sidebar-link" data-target="view-profile">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <span>My Profile</span>
+        </a>
+        <a href="#" class="sidebar-link" data-target="view-training">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+          </svg>
+          <span>My Training</span>
+        </a>
+        <a href="#" class="sidebar-link" data-target="view-performance">
+          <svg viewBox="0 0 24 24">
+            <line x1="18" y1="20" x2="18" y2="10"></line>
+            <line x1="12" y1="20" x2="12" y2="4"></line>
+            <line x1="6" y1="20" x2="6" y2="14"></line>
+          </svg>
+          <span>Performance</span>
+        </a>
+        <a href="#" class="sidebar-link" data-target="view-schedule">
+          <svg viewBox="0 0 24 24">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span>Schedule</span>
+        </a>
+      </nav>
+      <!-- Contact Information Section -->
+      <div class="sidebar-contact-info">
+        <div class="sidebar-contact-title">📞 Contact Us</div>
+        <a href="tel:+919865755478" class="sidebar-contact-link">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+          </svg>
+          <span>+91 98657-55478</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="#" class="sidebar-link logout-link" style="border-left: none; padding: 12px 0; margin-bottom: 0;">
+          <svg viewBox="0 0 24 24">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"></path>
+          </svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTAINER -->
+    <div class="dashboard-main">
+
+      <!-- HEADER BAR -->
+      <header class="dashboard-header">
+        <div class="header-left">
+          <button id="drawer-toggle" class="menu-drawer-toggle" aria-label="Open Sidebar Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <h1 id="header-page-title" class="header-page-title">Dashboard</h1>
+        </div>
+
+
+      </header>
+
+      <!-- SKELETON LOADER LAYER -->
+      <div id="skeleton-layer" class="skeleton-layer">
+        <div class="skeleton-row" style="height: 160px;">
+          <div class="skeleton-block skeleton"></div>
+        </div>
+        <div class="skeleton-row" style="height: 120px;">
+          <div class="skeleton-block skeleton"></div>
+          <div class="skeleton-block skeleton"></div>
+          <div class="skeleton-block skeleton"></div>
+          <div class="skeleton-block skeleton"></div>
+        </div>
+        <div class="skeleton-row" style="height: 320px;">
+          <div class="skeleton-block skeleton" style="flex-grow: 2;"></div>
+          <div class="skeleton-block skeleton" style="flex-grow: 1;"></div>
+        </div>
+      </div>
+
+      <!-- MAIN DASHBOARD CONTENT (LOADED) -->
+      <div class="dashboard-body dashboard-content-loaded" style="opacity: 0; transition: opacity 0.5s ease-out;">
+
+        <!-- SECTION 1: DASHBOARD OVERVIEW -->
+        <section id="view-dashboard" class="dashboard-view active">
+          <div class="welcome-banner reveal active">
+            <span class="welcome-tag">PLAYER HUB</span>
+            <h2 class="welcome-title">Welcome back, Champ!</h2>
+            <p class="welcome-subtitle">Your physical conditioning levels are up by 4% this week. Keep training and log
+              your metrics to hit today's targets.</p>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="metrics-grid">
+            <div class="metric-card reveal active">
+              <div class="metric-icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <div class="metric-value counter-number">34</div>
+              <div class="metric-label">Max Speed (km/h)</div>
+              <div class="metric-trend trend-up">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+                <span>+1.2 km/h</span>
+              </div>
+            </div>
+
+            <div class="metric-card reveal active">
+              <div class="metric-icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 6v6l4 2"></path>
+                </svg>
+              </div>
+              <div class="metric-value counter-number">92%</div>
+              <div class="metric-label">Endurance Rating</div>
+              <div class="metric-trend trend-up">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+                <span>+3.5%</span>
+              </div>
+            </div>
+
+            <div class="metric-card reveal active">
+              <div class="metric-icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div class="metric-value counter-number">8</div>
+              <div class="metric-label">Agility Score (sec)</div>
+              <div class="metric-trend trend-down">
+                <svg viewBox="0 0 24 24" style="transform: rotate(180deg); color: var(--color-sports-green);">
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+                <span style="color: var(--color-sports-green);">-0.4s</span>
+              </div>
+            </div>
+
+            <div class="metric-card reveal active">
+              <div class="metric-icon-wrapper">
+                <svg viewBox="0 0 24 24">
+                  <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                  <path d="M2 8h16v8H2z"></path>
+                  <line x1="6" y1="12" x2="14" y2="12"></line>
+                </svg>
+              </div>
+              <div class="metric-value counter-number">125</div>
+              <div class="metric-label">Deadlift Max (kg)</div>
+              <div class="metric-trend trend-up">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+                <span>+5 kg</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="dashboard-grid-2">
+            <!-- Summary lists -->
+            <div class="dashboard-card reveal active">
+              <h3 class="card-title" style="margin-bottom:16px;">Today's Training Overview</h3>
+              <div class="schedule-list">
+                <div class="schedule-item">
+                  <div class="schedule-time-badge"><span>08:30</span><span>AM</span></div>
+                  <div class="schedule-details">
+                    <span class="schedule-title">Kinetics Sprint Session</span>
+                    <span style="font-size:0.8rem; color:var(--color-text-secondary);">Focus: Acceleration
+                      thresholds</span>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time-badge"><span>04:00</span><span>PM</span></div>
+                  <div class="schedule-details">
+                    <span class="schedule-title">Water Resistance Swimming</span>
+                    <span style="font-size:0.8rem; color:var(--color-text-secondary);">Focus: Hydro decompression</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard-card reveal active">
+              <h3 class="card-title" style="margin-bottom:16px;">Direct Actions</h3>
+              <div class="quick-actions-list">
+                <a href="#" class="quick-action-row sidebar-link" data-target="view-training">
+                  <div class="quick-action-row-left">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg>
+                    <span>View Assigned Drills</span>
+                  </div>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+                <a href="#" class="quick-action-row sidebar-link" data-target="view-performance">
+                  <div class="quick-action-row-left">
+                    <svg viewBox="0 0 24 24">
+                      <line x1="18" y1="20" x2="18" y2="10"></line>
+                      <line x1="12" y1="20" x2="12" y2="4"></line>
+                      <line x1="6" y1="20" x2="6" y2="14"></line>
+                    </svg>
+                    <span>Show Achievements</span>
+                  </div>
+                  <svg viewBox="0 0 24 24">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: MY PROFILE -->
+        <section id="view-profile" class="dashboard-view">
+          <div class="profile-grid">
+            <div class="profile-avatar-card">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=150"
+                alt="Avatar large" class="profile-avatar-large" id="avatar-profile-large">
+              <h3 class="card-title" id="profile-card-name" style="margin-bottom:4px;">Alex Johnson</h3>
+              <span class="user-role" style="font-size:0.85rem;">Sprinter Athlete</span>
+              <button class="btn btn-secondary"
+                style="font-size:0.8rem; padding:8px 16px; margin-top: 12px; width: 100%;">Upload New Photo</button>
+            </div>
+
+            <div class="profile-form-card">
+              <h3 class="profile-section-title">Personal Information</h3>
+              <form id="edit-profile-form">
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label>Full Athlete Name</label>
+                    <input type="text" id="profile-name" class="form-control" value="Alex Johnson" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" id="profile-email" class="form-control" value="alex.johnson@apex.com" required>
+                  </div>
+                </div>
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label>Contact Phone</label>
+                    <input type="text" id="profile-phone" class="form-control" value="+1 (555) 342-9980">
+                  </div>
+                  <div class="form-group">
+                    <label>Emergency Contact</label>
+                    <input type="text" id="profile-emergency" class="form-control" value="Parent: Janet Johnson">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary" style="margin-bottom:30px;">Save Profile Details</button>
+              </form>
+
+              <h3 class="profile-section-title">Change Password</h3>
+              <form id="profile-password-form">
+                <div class="form-grid-2">
+                  <div class="form-group">
+                    <label>New Password</label>
+                    <input type="password" id="profile-new-password" class="form-control" required
+                      placeholder="Minimum 8 characters">
+                  </div>
+                  <div class="form-group">
+                    <label>Confirm New Password</label>
+                    <input type="password" id="profile-confirm-password" class="form-control" required
+                      placeholder="Re-type password">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-secondary" style="margin-bottom:0;">Update Password</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3: MY TRAINING -->
+        <section id="view-training" class="dashboard-view">
+          <div class="dashboard-grid-2">
+            <div class="dashboard-card">
+              <h3 class="card-title" style="margin-bottom: 16px;">Assigned Training Drills</h3>
+              <div class="attendance-grid">
+                <div class="attendance-row" style="grid-template-columns: 2fr 1fr;">
+                  <div>
+                    <strong style="color:var(--color-dark-slate);">Sprint Acceleration Phase A</strong>
+                    <p style="font-size:0.8rem; color:var(--color-text-secondary); margin-bottom:0;">5 repeats of 60m w/
+                      coach Robert</p>
+                  </div>
+                  <span class="status-badge status-active" style="text-align:center;">Assigned</span>
+                </div>
+                <div class="attendance-row" style="grid-template-columns: 2fr 1fr;">
+                  <div>
+                    <strong style="color:var(--color-dark-slate);">Lactic Acid Pool Swim</strong>
+                    <p style="font-size:0.8rem; color:var(--color-text-secondary); margin-bottom:0;">15 mins recovery
+                      interval swim</p>
+                  </div>
+                  <span class="status-badge status-active" style="text-align:center;">Assigned</span>
+                </div>
+              </div>
+
+              <h3 class="card-title" style="margin-top: 32px; margin-bottom: 16px;">Daily Workout Completion</h3>
+              <label class="checkbox-label"
+                style="padding: 12px; background: var(--color-gray-light); border-radius: var(--radius-sm); margin-bottom:8px; display:flex;">
+                <input type="checkbox" id="chk-drill-1" checked>
+                <span>Completed Sprint Warm-up drills</span>
+              </label>
+              <label class="checkbox-label"
+                style="padding: 12px; background: var(--color-gray-light); border-radius: var(--radius-sm); margin-bottom:8px; display:flex;">
+                <input type="checkbox" id="chk-drill-2">
+                <span>Completed 5x 60m Acceleration sprints</span>
+              </label>
+              <label class="checkbox-label"
+                style="padding: 12px; background: var(--color-gray-light); border-radius: var(--radius-sm); margin-bottom:8px; display:flex;">
+                <input type="checkbox" id="chk-drill-3">
+                <span>Completed Recovery stretch routines</span>
+              </label>
+            </div>
+
+            <!-- Progress Ring Tracker -->
+            <div class="dashboard-card" style="align-items: center; justify-content: center;">
+              <h3 class="card-title" style="align-self: flex-start; margin-bottom: 24px;">Progress Tracker</h3>
+              <div class="progress-ring-container" style="flex-direction: column;">
+                <svg class="progress-ring-svg" width="160" height="160">
+                  <circle class="progress-ring-circle-bg" cx="80" cy="80" r="60" style="stroke-width:12;"></circle>
+                  <circle class="progress-ring-circle-fill" cx="80" cy="80" r="60"
+                    style="stroke-width:12; stroke-dasharray:376.99; --target-offset: 75.4;"></circle>
+                </svg>
+                <div style="text-align:center; margin-top:20px;">
+                  <span class="progress-ring-value counter-number">80%</span><br>
+                  <span class="progress-ring-label">Weekly conditioning targets met</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4: PERFORMANCE DETAILS -->
+        <section id="view-performance" class="dashboard-view">
+          <div class="dashboard-grid-2">
+            <div class="dashboard-card">
+              <h3 class="card-title">Weekly Performance Index</h3>
+              <div class="svg-chart-container">
+                <svg viewBox="0 0 600 240" width="100%" height="100%" overflow="visible">
+                  <line x1="0" y1="40" x2="600" y2="40" class="chart-grid-line"></line>
+                  <line x1="0" y1="100" x2="600" y2="100" class="chart-grid-line"></line>
+                  <line x1="0" y1="160" x2="600" y2="160" class="chart-grid-line"></line>
+                  <line x1="0" y1="220" x2="600" y2="220" class="chart-grid-line"></line>
+                  <path d="M0,220 L50,180 L150,150 L250,165 L350,120 L450,135 L550,80 L600,80 L600,220 Z"
+                    class="chart-area"></path>
+                  <path d="M0,220 L50,180 L150,150 L250,165 L350,120 L450,135 L550,80" class="chart-path"></path>
+                  <circle cx="50" cy="180" r="5" class="chart-dot"></circle>
+                  <circle cx="150" cy="150" r="5" class="chart-dot"></circle>
+                  <circle cx="250" cy="165" r="5" class="chart-dot"></circle>
+                  <circle cx="350" cy="120" r="5" class="chart-dot"></circle>
+                  <circle cx="450" cy="135" r="5" class="chart-dot"></circle>
+                  <circle cx="550" cy="80" r="5" class="chart-dot"></circle>
+                </svg>
+                <div class="chart-labels-x">
+                  <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="dashboard-card">
+              <h3 class="card-title" style="margin-bottom: 16px;">Conditioning Achievements</h3>
+              <div class="achievements-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="achievement-item">
+                  <div class="achievement-icon"><svg viewBox="0 0 24 24" width="24" fill="currentColor">
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                      </polygon>
+                    </svg></div>
+                  <span class="achievement-title">Speed Demon</span>
+                </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon" style="color:#64748b;"><svg viewBox="0 0 24 24" width="24"
+                      fill="currentColor">
+                      <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                    </svg></div>
+                  <span class="achievement-title">Iron Titan</span>
+                </div>
+              </div>
+              <div class="profile-divider" style="margin:20px 0;"></div>
+              <div style="text-align: center;">
+                <span
+                  style="font-size: 0.8rem; font-weight:700; color:var(--color-text-secondary); text-transform:uppercase;">Overall
+                  Fitness Score</span>
+                <div class="metric-value counter-number"
+                  style="font-size: 2.8rem; margin-top:8px; color:var(--color-sports-green);">87</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5: SCHEDULES -->
+        <section id="view-schedule" class="dashboard-view">
+          <div class="dashboard-grid-2">
+            <!-- Calendar widget -->
+            <div class="calendar-widget">
+              <div class="calendar-header">
+                <span style="font-size:1.1rem; font-weight:700;">July 2026</span>
+                <span style="font-size:0.8rem; color:var(--color-sports-green);">Conditioning Calendar</span>
+              </div>
+              <div class="calendar-days-grid">
+                <span class="calendar-day-label">S</span>
+                <span class="calendar-day-label">M</span>
+                <span class="calendar-day-label">T</span>
+                <span class="calendar-day-label">W</span>
+                <span class="calendar-day-label">T</span>
+                <span class="calendar-day-label">F</span>
+                <span class="calendar-day-label">S</span>
+
+                <span class="calendar-day text-muted">28</span>
+                <span class="calendar-day text-muted">29</span>
+                <span class="calendar-day text-muted">30</span>
+                <span class="calendar-day">1</span>
+                <span class="calendar-day">2</span>
+                <span class="calendar-day">3</span>
+                <span class="calendar-day has-event">4</span>
+                <span class="calendar-day active has-event">5</span>
+                <span class="calendar-day">6</span>
+                <span class="calendar-day">7</span>
+                <span class="calendar-day">8</span>
+                <span class="calendar-day">9</span>
+                <span class="calendar-day">10</span>
+                <span class="calendar-day">11</span>
+                <span class="calendar-day">12</span>
+                <span class="calendar-day">13</span>
+                <span class="calendar-day">14</span>
+                <span class="calendar-day">15</span>
+                <span class="calendar-day">16</span>
+                <span class="calendar-day">17</span>
+                <span class="calendar-day">18</span>
+                <span class="calendar-day">19</span>
+                <span class="calendar-day">20</span>
+                <span class="calendar-day">21</span>
+                <span class="calendar-day">22</span>
+                <span class="calendar-day">23</span>
+                <span class="calendar-day">24</span>
+                <span class="calendar-day">25</span>
+                <span class="calendar-day">26</span>
+                <span class="calendar-day">27</span>
+                <span class="calendar-day">28</span>
+                <span class="calendar-day">29</span>
+                <span class="calendar-day">30</span>
+                <span class="calendar-day">31</span>
+              </div>
+            </div>
+
+            <!-- Schedule List details -->
+            <div class="dashboard-card">
+              <h3 class="card-title" style="margin-bottom:16px;">Scheduled Events &amp; Timetable</h3>
+              <div class="schedule-list">
+                <div class="schedule-item">
+                  <div class="schedule-time-badge"><span>5</span><span>July</span></div>
+                  <div class="schedule-details">
+                    <span class="schedule-title">Conditioning session (Current Active)</span>
+                    <span style="font-size:0.8rem; color:var(--color-text-secondary);">08:30 AM Gym Workout</span>
+                  </div>
+                </div>
+                <div class="schedule-item">
+                  <div class="schedule-time-badge"><span>12</span><span>July</span></div>
+                  <div class="schedule-details">
+                    <span class="schedule-title">Roster Acceleration Audits</span>
+                    <span style="font-size:0.8rem; color:var(--color-text-secondary);">10:00 AM Track Drills</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JS Scripts -->
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+
+</html>

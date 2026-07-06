@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academy Gallery</title>
+  <meta name="description"
+    content="Browse through the  Sports Academy photo gallery. Filter highlights from training sessions, national tournaments, campus environments, and award ceremonies.">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Custom Page Preloader -->
+  <div id="loader-overlay">
+    <div class="loader-card">
+      <div class="loader-ring-wrapper">
+        <div class="loader-glow"></div>
+        <div class="loader-circle"></div>
+        <img src="assets/logo.webp" alt="Apex Logo" class="loader-logo">
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+      </div>
+      <h2 class="loader-title">Sports Academy</h2>
+      <div class="loader-text-wrapper">
+        <span class="loader-message">Preparing Your Experience</span>
+        <span class="loader-dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="gallery.html" class="nav-link active">Gallery</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="btn btn-primary login-trigger">Login</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div class="mobile-drawer-logo-section">
+      <a href="index.html" class="mobile-drawer-logo-link">
+        <img src="assets/logo2.webp" alt="Sports Academy Logo" class="mobile-drawer-logo">
+      </a>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M12 16v-4" />
+          <path d="M12 8h.01" />
+        </svg>
+        <span>About</span>
+      </a>
+      <a href="facilities.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" />
+          <path d="M9 3v18" />
+          <path d="M15 3v18" />
+          <path d="M3 9h18" />
+          <path d="M3 15h18" />
+        </svg>
+        <span>Facilities</span>
+      </a>
+      <a href="gallery.html" class="mobile-nav-link active">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+          <circle cx="9" cy="9" r="2" />
+          <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+        </svg>
+        <span>Gallery</span>
+      </a>
+      <a href="events.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+          <line x1="16" y1="2" x2="16" y2="6" />
+          <line x1="8" y1="2" x2="8" y2="6" />
+          <line x1="3" y1="10" x2="21" y2="10" />
+        </svg>
+        <span>Events</span>
+      </a>
+      <a href="blog.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" />
+          <path d="M6 6h10" />
+          <path d="M6 10h10" />
+        </svg>
+        <span>Blog</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <span>Contact</span>
+      </a>
+    </nav>
+    <div class="mobile-drawer-btn-wrapper">
+      <a href="#" class="btn btn-primary login-trigger">Login Portal</a>
+    </div>
+    <div class="mobile-drawer-contact-info">
+      <div class="mobile-drawer-contact-title">📞 Contact Us</div>
+      <a href="tel:+919865755478" class="mobile-drawer-contact-link">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+        <span>+91 98657-55478</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="page-transitioning">
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div class="page-hero-content reveal fade-right">
+            <nav class="breadcrumb-nav">
+              <a href="index.html">Home</a>
+              <span class="separator">/</span>
+              <span class="current">Gallery</span>
+            </nav>
+            <h1 class="page-hero-title">Academy Media Archive</h1>
+            <p class="page-hero-desc">Take a look inside the training spaces, high-intensity competition grids, athlete
+              recovery sessions, and final champion podium ceremonies.</p>
+          </div>
+          <div class="page-hero-visual reveal fade-left delay-2">
+            <!-- Image Placeholder 4: Gallery Image -->
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/g1.webp" alt="Championship Action Shots" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filters & Gallery Masonry Section -->
+    <section class="gallery-section">
+      <div class="container">
+
+        <!-- Filter Bar Buttons -->
+        <div class="gallery-filters reveal fade-up">
+          <button class="filter-btn active" data-filter="all">All Photos</button>
+          <button class="filter-btn" data-filter="training">Training Sessions</button>
+          <button class="filter-btn" data-filter="matches">Match Highlights</button>
+          <button class="filter-btn" data-filter="championships">Championship Events</button>
+          <button class="filter-btn" data-filter="campus">Campus Life</button>
+          <button class="filter-btn" data-filter="awards">Award Ceremonies</button>
+        </div>
+
+        <!-- Masonry Grid Grid -->
+        <div class="gallery-masonry reveal zoom-reveal">
+          <!-- Item 1: Wide training -->
+          <div class="gallery-grid-item wide" data-category="training" data-title="Dynamic Warm-up Sprint Drills"
+            data-desc="Athletes practice explosive starts and deceleration techniques on the outdoor running track.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/drill.webp" alt="Sprint Drills" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Item 2: Tall matches -->
+          <div class="gallery-grid-item tall" data-category="matches" data-title="Championship Match Penalty Shot"
+            data-desc="Apex Football Club matches and penalty kick sequences during local state tournament finals.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/kick.webp" alt="Penalty Kick" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Item 3: Regular campus -->
+          <div class="gallery-grid-item" data-category="campus" data-title="High-Performance Strength Room"
+            data-desc="Overview of the Eleiko-fitted lifting platforms and functional cable setups inside the primary gym.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/weight.webp" alt="Weight Room" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Item 4: Tall championships -->
+          <div class="gallery-grid-item tall" data-category="championships" data-title="Sprint Event Final Dash"
+            data-desc="Trainees competing in the 100-meter dash final on regional championship events.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/sprint.webp" alt="100m Sprint Final" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Item 5: Regular awards -->
+          <div class="gallery-grid-item" data-category="awards" data-title="Junior League Cup Gold Medal"
+            data-desc="Coaches presenting state championship gold medals to our U-15 soccer roster.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/u15.webp" alt="U-15 Medals" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Item 6: Wide matches -->
+          <div class="gallery-grid-item wide" data-category="matches" data-title="Overhead Slam Dunk Block"
+            data-desc="Action shot of Apex defensive lines blocking an overhead dunk during the winter tournament.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/basket.webp" alt="Basketball Slam Dunk" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Item 7: Regular training -->
+          <div class="gallery-grid-item" data-category="training" data-title="Batting Mechanics Under Video Review"
+            data-desc="Cricket nets analysis capturing back-lift swings and elbow pivots for cricket athletes.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/bating.webp" alt="Batting Mechanics" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Item 8: Regular campus -->
+          <div class="gallery-grid-item" data-category="campus" data-title="Olympic-Size Aquatics Center"
+            data-desc="Morning lap sessions inside the 50-meter indoor competitive pool.">
+            <div class="img-placeholder gallery-placeholder">
+              <img src="assets/pool.webp" alt="Aquatics Pool" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Footer CTA Banner -->
+    <section class="cta-section-wrapper">
+      <div class="container">
+        <div class="final-cta-banner reveal zoom-reveal">
+          <div class="final-cta-grid">
+            <div>
+              <h2 class="final-cta-title">See our athletes in action?</h2>
+              <p class="final-cta-desc">Check out our upcoming championship tournaments schedule or apply to secure your
+                cadet position today.</p>
+            </div>
+            <div class="final-cta-actions">
+              <!-- Image Placeholder 5: CTA Image (used inside final CTA card visually) -->
+              <div class="img-placeholder cta-placeholder" style="display: none;"></div>
+              <a href="events.html" class="btn btn-secondary"
+                style="font-size: 1.05rem; padding: 18px 36px; background-color: var(--color-white); color: var(--color-sports-green);">View
+                Academy Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Popup Modal -->
+  <div class="lightbox-modal">
+    <button class="lightbox-close-btn" aria-label="Close Lightbox">
+      <svg viewBox="0 0 24 24">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <div class="lightbox-content">
+      <div class="lightbox-placeholder-wrapper">
+        <div class="img-placeholder gallery-placeholder" style="min-width: 320px; max-width: 800px; min-height: 450px;">
+          <img src="" alt="" id="lightbox-img" style="display: none;">
+          <div class="placeholder-content">
+            <div class="placeholder-label" id="lightbox-label">Category</div>
+            <h3 class="placeholder-title" id="lightbox-title">Image Title</h3>
+            <p style="font-size: 0.95rem; color: rgba(255, 255, 255, 0.7); max-width: 450px; margin: 12px auto;"
+              id="lightbox-desc">Description</p>
+          </div>
+        </div>
+      </div>
+      <div class="lightbox-caption" id="lightbox-caption-text">Visual Asset Showcase</div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+          </a>
+          <p>An international sports training academy dedicated to athletic excellence, professional mentoring, and
+            holistic development.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Academy</a></li>
+            <li><a href="facilities.html" class="footer-link">Our Facilities</a></li>
+            <li><a href="gallery.html" class="footer-link">Media Gallery</a></li>
+            <li><a href="events.html" class="footer-link">Academy Events</a></li>
+            <li><a href="blog.html" class="footer-link">Sports Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Contact Details</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>100 Apex Boulevard, Arena District, CA 90210</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>admissions@apexsports.com</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 555-APEX</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3 class="footer-title">Newsletter</h3>
+          <p>Subscribe to receive scouting notices, open enrollment dates, and tactical insights.</p>
+          <form class="newsletter-form"
+            onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+            <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+              aria-label="Email Address">
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="copyright">&copy; <span id="copyright-year">2026</span> Apex Sports Academy. All rights
+          reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal Dialog Overlay -->
+  <div class="modal-overlay">
+    <div class="modal-wrapper">
+      <button class="modal-close-btn" aria-label="Close Portal Modal">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-form-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Apex Sports Portal</h3>
+          <p class="modal-subtitle">Select your account profile and enter your credentials</p>
+        </div>
+        <form id="login-form" novalidate>
+          <div class="select-wrapper">
+            <label class="select-label" for="login-role">Login As</label>
+            <select class="custom-select" id="login-role">
+              <option value="Player">Player Login</option>
+              <option value="Admin">Admin Login</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <input type="email" id="modal-email" class="floating-input" placeholder=" " required autocomplete="email">
+            <label for="modal-email" class="floating-label">Email Address</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="modal-password" class="floating-input" placeholder=" " required
+              autocomplete="current-password">
+            <label for="modal-password" class="floating-label">Password</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="modal-confirm-password" class="floating-input" placeholder=" " required
+              autocomplete="new-password">
+            <label for="modal-confirm-password" class="floating-label">Confirm Password</label>
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="modal-remember">
+              <span>Remember Me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary modal-submit-btn">Login</button>
+          <div class="modal-divider">OR</div>
+          <p class="modal-footer-text">Don't have an account? <a href="#">Create Account</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll Back To Top">
+    <svg viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/carousel.js"></script>
+
+  <!-- Inline Script for Filter and Lightbox Operations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Gallery Filter Operations
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-grid-item');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const category = btn.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            const itemCat = item.getAttribute('data-category');
+            if (category === 'all' || itemCat === category) {
+              item.style.display = 'block';
+              // Add brief reveal refresh trigger
+              setTimeout(() => {
+                item.style.transform = 'scale(1)';
+                item.style.opacity = '1';
+              }, 50);
+            } else {
+              item.style.transform = 'scale(0.95)';
+              item.style.opacity = '0';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // 2. Gallery Lightbox Modal Actions
+      const lightbox = document.querySelector('.lightbox-modal');
+      const lTitle = document.getElementById('lightbox-title');
+      const lDesc = document.getElementById('lightbox-desc');
+      const lLabel = document.getElementById('lightbox-label');
+      const lImg = document.getElementById('lightbox-img');
+      const lightboxCloseBtn = document.querySelector('.lightbox-close-btn');
+
+      galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const title = item.getAttribute('data-title');
+          const desc = item.getAttribute('data-desc');
+          const cat = item.getAttribute('data-category');
+          const clickedImg = item.querySelector('img');
+
+          lTitle.textContent = title;
+          lDesc.textContent = desc;
+          lLabel.textContent = cat;
+
+          if (clickedImg && lImg) {
+            lImg.src = clickedImg.src;
+            lImg.alt = title;
+            lImg.style.display = 'block';
+          }
+
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      if (lightboxCloseBtn) {
+        lightboxCloseBtn.addEventListener('click', closeLightbox);
+      }
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+          closeLightbox();
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

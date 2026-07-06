@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <meta name="description"
+    content="Read the story of Apex Sports Academy. Discover our mission, core values, annual historical milestone timeline, and meet our executive coaching leadership.">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+
+<body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Custom Page Preloader -->
+  <div id="loader-overlay">
+    <div class="loader-card">
+      <div class="loader-ring-wrapper">
+        <div class="loader-glow"></div>
+        <div class="loader-circle"></div>
+        <img src="assets/logo.webp" alt="Apex Logo" class="loader-logo">
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
+        <div class="particle p4"></div>
+      </div>
+      <h2 class="loader-title">Sports Academy</h2>
+      <div class="loader-text-wrapper">
+        <span class="loader-message">Preparing Your Experience</span>
+        <span class="loader-dots"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Navbar Header -->
+  <header class="main-header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo-link">
+        <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+      </a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a href="#" class="btn btn-primary login-trigger">Login</a>
+        <button class="mobile-nav-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer">
+    <div class="mobile-drawer-logo-section">
+      <a href="index.html" class="mobile-drawer-logo-link">
+        <img src="assets/logo.webp" alt="Sports Academy Logo" class="mobile-drawer-logo">
+      </a>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Home</span>
+      </a>
+      <a href="about.html" class="mobile-nav-link active">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+        <span>About</span>
+      </a>
+      <a href="facilities.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+        <span>Facilities</span>
+      </a>
+      <a href="gallery.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        <span>Gallery</span>
+      </a>
+      <a href="events.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span>Events</span>
+      </a>
+      <a href="blog.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M6 6h10"/><path d="M6 10h10"/></svg>
+        <span>Blog</span>
+      </a>
+      <a href="contact.html" class="mobile-nav-link">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Contact</span>
+      </a>
+    </nav>
+    <div class="mobile-drawer-btn-wrapper">
+      <a href="#" class="btn btn-primary login-trigger">Login Portal</a>
+    </div>
+    <div class="mobile-drawer-contact-info">
+      <div class="mobile-drawer-contact-title">📞 Contact Us</div>
+      <a href="tel:+919865755478" class="mobile-drawer-contact-link">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>+91 98657-55478</span>
+      </a>
+    </div>
+  </div>
+
+  <main class="page-transitioning">
+    <!-- Page Hero Section -->
+    <section class="page-hero">
+      <div class="container">
+        <div class="page-hero-grid">
+          <div class="page-hero-content reveal fade-right">
+            <nav class="breadcrumb-nav">
+              <a href="index.html">Home</a>
+              <span class="separator">/</span>
+              <span class="current">About</span>
+            </nav>
+            <h1 class="page-hero-title">Our Academy Story</h1>
+            <p class="page-hero-desc">Founded on the principles of discipline, athletic science, and academic balance,
+              Sports Academy builds international pipelines for sports excellence.</p>
+          </div>
+          <div class="page-hero-visual reveal fade-left delay-2">
+            <!-- Image Placeholder 2: About Image -->
+            <div class="img-placeholder about-placeholder">
+              <img src="assets/a1 (1).webp" alt="Founding Members & Campus" loading="eager">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academy Story & Content Section -->
+    <section class="story-section">
+      <div class="container">
+        <div class="grid grid-2" style="align-items: center; gap: 60px;">
+          <div class="story-content reveal fade-right">
+            <span class="section-tag">Legacy</span>
+            <h2 style="margin-bottom: 24px;">Built on Passion and Innovation</h2>
+            <p style="margin-bottom: 20px;">For over fifteen years, Sports Academy has worked closely with national
+              sports federations, Olympic panels, and leading sports scientists to construct a unified development
+              framework. We believe that true champions are molded not through repetitive drill cycles, but by
+              understanding movement biometrics, strategic coordinate positioning, and diet recovery metrics.</p>
+            <p>Our training centers cater to over 1,500 active athletes annually, offering tailored regimens that
+              support competitive targets, scholarship requirements, and pathway entries into professional draft pools.
+              We maintain high standards of sportsmanship, educational equilibrium, and integrity across all our
+              divisions.</p>
+          </div>
+          <div class="story-highlight-box reveal fade-left delay-2">
+            <div class="wcu-card"
+              style="border: 1px solid var(--color-gray-border); background-color: var(--color-gray-light);">
+              <h3 style="margin-bottom: 16px; color: var(--color-sports-green);">Holistic Focus</h3>
+              <p style="margin-bottom: 24px;">Our curricula unite five major sectors of athletic health to ensure a
+                balanced, long-lasting career pathway for our trainees:</p>
+              <ul style="display: flex; flex-direction: column; gap: 12px; font-weight: 600;">
+                <li style="display: flex; gap: 10px; align-items: center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-sports-green)"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Motor Skills &amp; Conditioning
+                </li>
+                <li style="display: flex; gap: 10px; align-items: center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-sports-green)"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Tactical Geometry &amp; Logic
+                </li>
+                <li style="display: flex; gap: 10px; align-items: center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-sports-green)"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Nutritional Bio-Schedules
+                </li>
+                <li style="display: flex; gap: 10px; align-items: center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-sports-green)"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Mental Toughening Programs
+                </li>
+                <li style="display: flex; gap: 10px; align-items: center;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-sports-green)"
+                    stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Academic Advancement Support
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission-section" style="background-color: var(--color-gray-light);">
+      <div class="container">
+        <div class="grid grid-2">
+          <div class="wcu-card card-lift reveal fade-up">
+            <div class="wcu-icon-box"
+              style="background-color: var(--color-sports-green-tint); color: var(--color-sports-green);">
+              <svg viewBox="0 0 24 24">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
+            </div>
+            <h3 class="wcu-title">Our Vision</h3>
+            <p>To stand as the global benchmark for professional sports education, producing athletes who demonstrate
+              outstanding athletic precision, high leadership values, and clean competitive execution on international
+              platforms.</p>
+          </div>
+          <div class="wcu-card card-lift reveal fade-up delay-2">
+            <div class="wcu-icon-box"
+              style="background-color: var(--color-sports-green-tint); color: var(--color-sports-green);">
+              <svg viewBox="0 0 24 24">
+                <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                <polyline points="2 17 12 22 22 17" />
+                <polyline points="2 12 12 17 22 12" />
+              </svg>
+            </div>
+            <h3 class="wcu-title">Our Mission</h3>
+            <p>To cultivate athletic potential through structured sports curricula, science-backed recovery, academic
+              tutoring options, and state-of-the-art facilities, fostering healthy growth and lifetime pathways for
+              students globally.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Values Section -->
+    <section class="values-section">
+      <div class="container">
+        <div class="section-header center reveal fade-up">
+          <span class="section-tag">Values</span>
+          <h2 class="section-title">The Athlete Code</h2>
+          <p class="section-desc">We foster a corporate environment of physical progress and mental accountability built
+            on five structural pillars.</p>
+        </div>
+        <div class="grid grid-3" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+          <div class="wcu-card card-lift reveal fade-up delay-1" style="padding: 30px; text-align: center;">
+            <h3 style="color: var(--color-sports-green); margin-bottom: 12px;">Excellence</h3>
+            <p style="font-size: 0.95rem;">Uncompromising focus on technical details, effort metrics, and daily
+              incremental progress.</p>
+          </div>
+          <div class="wcu-card card-lift reveal fade-up delay-2" style="padding: 30px; text-align: center;">
+            <h3 style="color: var(--color-sports-green); margin-bottom: 12px;">Integrity</h3>
+            <p style="font-size: 0.95rem;">Upholding absolute honesty, fair play, clean athletic standards, and code
+              respect.</p>
+          </div>
+          <div class="wcu-card card-lift reveal fade-up delay-3" style="padding: 30px; text-align: center;">
+            <h3 style="color: var(--color-sports-green); margin-bottom: 12px;">Teamwork</h3>
+            <p style="font-size: 0.95rem;">Fostering collaboration, mutual encouragement, shared alignment, and team
+              support.</p>
+          </div>
+          <div class="wcu-card card-lift reveal fade-up delay-4" style="padding: 30px; text-align: center;">
+            <h3 style="color: var(--color-sports-green); margin-bottom: 12px;">Perseverance</h3>
+            <p style="font-size: 0.95rem;">Overcoming performance plateaus, injury recoveries, and tactical challenges
+              with resilience.</p>
+          </div>
+          <div class="wcu-card card-lift reveal fade-up delay-5"
+            style="padding: 30px; text-align: center; grid-column: span 2; max-width: 500px; margin: 0 auto;">
+            <h3 style="color: var(--color-sports-green); margin-bottom: 12px;">Health &amp; Balance</h3>
+            <p style="font-size: 0.95rem;">Balancing intensive physical workouts with correct sleep, metabolic
+              schedules, and school requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Journey Timeline Section -->
+    <section class="timeline-section" style="background-color: var(--color-gray-light);">
+      <div class="container">
+        <div class="section-header center reveal fade-up">
+          <span class="section-tag">Timeline</span>
+          <h2 class="section-title">Fifteen Years of Athletic Evolution</h2>
+          <p class="section-desc">Trace the structural evolution of Apex Sports Academy from a local training camp to a
+            multi-discipline global sport brand.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Row 1 -->
+          <div class="timeline-row">
+            <div class="timeline-col">
+              <div class="timeline-card reveal fade-right">
+                <div class="timeline-year">2011</div>
+                <h3 class="timeline-title">Foundation &amp; First Camp</h3>
+                <p>Apex is registered as a specialized football and sprint academy with 4 coaches and 50 junior
+                  recruits, utilizing leased city pitches.</p>
+              </div>
+            </div>
+            <div class="timeline-col"></div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="timeline-row">
+            <div class="timeline-col">
+              <div class="timeline-card reveal fade-left">
+                <div class="timeline-year">2015</div>
+                <h3 class="timeline-title">Arena District Acquisition</h3>
+                <p>Purchased the primary 10-acre block in the Arena District. Constructed our first indoor training
+                  stadium and cricket nets area.</p>
+              </div>
+            </div>
+            <div class="timeline-col"></div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="timeline-row">
+            <div class="timeline-col">
+              <div class="timeline-card reveal fade-right">
+                <div class="timeline-year">2019</div>
+                <h3 class="timeline-title">Pathway Draft Programs</h3>
+                <p>Introduced the College Scouting Network system. Secured structural ties with national sports agencies
+                  and scholarship boards.</p>
+              </div>
+            </div>
+            <div class="timeline-col"></div>
+          </div>
+
+          <!-- Row 4 -->
+          <div class="timeline-row">
+            <div class="timeline-col">
+              <div class="timeline-card reveal fade-left">
+                <div class="timeline-year">2023</div>
+                <h3 class="timeline-title">Sports Science Unit</h3>
+                <p>Launched a recovery center fully fitted with cryotherapy chambers, biodynamic sensor equipment, and
+                  medical athletic support units.</p>
+              </div>
+            </div>
+            <div class="timeline-col"></div>
+          </div>
+
+          <!-- Row 5 -->
+          <div class="timeline-row">
+            <div class="timeline-col">
+              <div class="timeline-card reveal fade-right">
+                <div class="timeline-year">2026</div>
+                <h3 class="timeline-title">Global Expansion &amp; Digital Portals</h3>
+                <p>Opening regional satellite facilities and introducing interactive training and registration portal
+                  platforms globally.</p>
+              </div>
+            </div>
+            <div class="timeline-col"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+      <div class="container">
+        <div class="section-header center reveal fade-up">
+          <span class="section-tag">Leadership</span>
+          <h2 class="section-title">Meet Our Executive Coaching Board</h2>
+          <p class="section-desc">Driven by athletic professionals who have competed, designed curricula, and won
+            championships at international levels.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="team-card card-lift reveal fade-up delay-1">
+            <!-- Image Placeholder 2: About Image (reused for team profile) -->
+            <div class="img-placeholder about-placeholder"
+              style="min-height: 250px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+              <img src="assets/a2.webp" alt="Director Ethan Reynolds" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Director Ethan Reynolds</h3>
+              <span class="team-role">Academy Principal &amp; Founder</span>
+            </div>
+          </div>
+          <div class="team-card card-lift reveal fade-up delay-2">
+            <!-- Image Placeholder 2: About Image (reused for team profile) -->
+            <div class="img-placeholder about-placeholder"
+              style="min-height: 250px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+              <img src="assets/a3.webp" alt="Coach Marcus Vance" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Coach Marcus Vance</h3>
+              <span class="team-role">Head of Football Development</span>
+            </div>
+          </div>
+          <div class="team-card card-lift reveal fade-up delay-3">
+            <!-- Image Placeholder 2: About Image (reused for team profile) -->
+            <div class="img-placeholder about-placeholder"
+              style="min-height: 250px; border-bottom-left-radius: 0; border-bottom-right-radius: 0;">
+              <img src="assets/a4.webp" alt="Dr. Aliyah Sterling" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Dr. Aliyah Sterling</h3>
+              <span class="team-role">Chief of Sports Science &amp; Recovery</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page Footer CTA Banner -->
+    <section class="cta-section-wrapper">
+      <div class="container">
+        <div class="final-cta-banner reveal zoom-reveal">
+          <div class="final-cta-grid">
+            <div>
+              <h2 class="final-cta-title">Want to Join the Ranks?</h2>
+              <p class="final-cta-desc">Speak with our admissions counselors and book an athletic coordination trial
+                session today.</p>
+            </div>
+            <div class="final-cta-actions">
+              <!-- Image Placeholder 5: CTA Image (used inside final CTA card visually) -->
+              <div class="img-placeholder cta-placeholder" style="display: none;"></div>
+              <a href="contact.html" class="btn btn-secondary"
+                style="font-size: 1.05rem; padding: 18px 36px; background-color: var(--color-white); color: var(--color-sports-green);">Book
+                A Coordination Trial</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <img src="assets/logo.webp" alt="IT Logo" class="site-logo">
+          </a>
+          <p>An international sports training academy dedicated to athletic excellence, professional mentoring, and
+            holistic development.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Facebook">
+              <svg viewBox="0 0 24 24">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="Instagram">
+              <svg viewBox="0 0 24 24">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer-title">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home</a></li>
+            <li><a href="about.html" class="footer-link">About Academy</a></li>
+            <li><a href="facilities.html" class="footer-link">Our Facilities</a></li>
+            <li><a href="gallery.html" class="footer-link">Media Gallery</a></li>
+            <li><a href="events.html" class="footer-link">Academy Events</a></li>
+            <li><a href="blog.html" class="footer-link">Sports Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer-title">Contact Details</h3>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              <span>100 Apex Boulevard, Arena District, CA 90210</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span>admissions@apexsports.com</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span>+1 (800) 555-APEX</span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h3 class="footer-title">Newsletter</h3>
+          <p>Subscribe to receive scouting notices, open enrollment dates, and tactical insights.</p>
+          <form class="newsletter-form"
+            onsubmit="event.preventDefault(); alert('Subscribed successfully!'); this.reset();">
+            <input type="email" placeholder="Your Email Address" class="newsletter-input" required
+              aria-label="Email Address">
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe">
+              <svg viewBox="0 0 24 24">
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="copyright">&copy; <span id="copyright-year">2026</span> Apex Sports Academy. All rights
+          reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Modal Dialog Overlay -->
+  <div class="modal-overlay">
+    <div class="modal-wrapper">
+      <button class="modal-close-btn" aria-label="Close Portal Modal">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-form-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Apex Sports Portal</h3>
+          <p class="modal-subtitle">Select your account profile and enter your credentials</p>
+        </div>
+        <form id="login-form" novalidate>
+          <div class="select-wrapper">
+            <label class="select-label" for="login-role">Login As</label>
+            <select class="custom-select" id="login-role">
+              <option value="Player">Player Login</option>
+              <option value="Admin">Admin Login</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <input type="email" id="modal-email" class="floating-input" placeholder=" " required autocomplete="email">
+            <label for="modal-email" class="floating-label">Email Address</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="modal-password" class="floating-input" placeholder=" " required
+              autocomplete="current-password">
+            <label for="modal-password" class="floating-label">Password</label>
+          </div>
+          <div class="input-group">
+            <input type="password" id="modal-confirm-password" class="floating-input" placeholder=" " required
+              autocomplete="new-password">
+            <label for="modal-confirm-password" class="floating-label">Confirm Password</label>
+          </div>
+          <div class="form-options">
+            <label class="checkbox-label">
+              <input type="checkbox" id="modal-remember">
+              <span>Remember Me</span>
+            </label>
+            <a href="#" class="forgot-link">Forgot Password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary modal-submit-btn">Login</button>
+          <div class="modal-divider">OR</div>
+          <p class="modal-footer-text">Don't have an account? <a href="#">Create Account</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" aria-label="Scroll Back To Top">
+    <svg viewBox="0 0 24 24">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <!-- JavaScript Modules -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/carousel.js"></script>
+</body>
+
+</html>
